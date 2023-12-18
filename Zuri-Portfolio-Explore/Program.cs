@@ -61,7 +61,7 @@ builder.Services.AddSingleton<IUriService>(o =>
     var uri = string.Concat(request.Scheme, "://", request.Host.ToUriComponent());
     return new UriService(uri);
 });
-var connectionString = builder.Configuration.GetConnectionString("RemoteConnection2");
+var connectionString = builder.Configuration.GetConnectionString("RemoteConnection3");
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseNpgsql(connectionString));
